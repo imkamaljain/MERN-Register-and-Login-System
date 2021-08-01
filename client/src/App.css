@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+    box-sizing: border-box;
+}
+#root {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+h1 {
+    margin: 0;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(183, 179, 179, 0.4);
+}
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0);
+    position: relative;
+}
+.button {
+    background: #003E75;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.loginContainer, .registerContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0);
+    padding: 1rem;
+    text-align: center;
+}
+label {
+    text-align: left;
+}
+input {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #E3E3E3;
+    outline: none;
+    color: #000;
+    margin: 0.5rem 0 1rem;
+    padding: 0.75rem 1rem;
+}
+input:focus {
+    border: 2px solid #003E75;
+    outline: none;
+}
+.popupContainer {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.5);
+}
+.popup {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    min-height: 50vh;
+    margin: auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px 0 rgb(0 0 0);
+}
+.popup > div {
+    height: 2rem;
+    color: #FF0000;
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: -1rem;
+}
+.divider {
+    text-align: center;
+    border-bottom: 1px solid #979faf;
+    line-height: 0.1em;
+}
+.divider > span {
+    background: #fff;
+    padding: 0 10px;
+}
