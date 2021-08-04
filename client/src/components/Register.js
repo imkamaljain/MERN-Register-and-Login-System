@@ -31,7 +31,7 @@ export default function Register({ setMessage }) {
             } else if (password !== reEnterPassword) {
                 alert('Passwords do not match.');
             } else {
-                axios.post('http://localhost:5000/register', { name, email, password })
+                axios.post('http://localhost:5000/user/register', { name, email, password })
                     .then(res => {
                         setMessage(res.data.message);
                         history.push('/login');

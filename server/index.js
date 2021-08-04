@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.end("<h1>Server is up and running.</h1>");
 });
 
-app.use('/', require('./routes/registerLoginRoutes'));
+app.use('/user', require('./routes/registerLoginRoutes'));
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);

@@ -5,7 +5,7 @@ import FormatUtils from '../utils/FormatUtils';
 
 const formatUtils = new FormatUtils();
 
-export default function Login({ setLoginUser, setMessage }) {
+export default function Login({ setMessage }) {
     const [user, setUser] = useState({
         email: '',
         password: ''
@@ -23,12 +23,14 @@ export default function Login({ setLoginUser, setMessage }) {
         const { email, password } = user;
         if (email && password) {
             if (formatUtils.validateEmail(email)) {
-            axios.post('http://localhost:5000/login', user)
-                .then(res => {
-                    setMessage(res.data.message);
-                    setLoginUser(res.data.user);
-                    history.push('/');
-                });
+                axios.post('http://localhost:5000/user/login', user)
+                    .then(res => {
+                        setMessage(res.data.message);
+                        if (res.status === 202) {
+                            localStorage.setItem("auth-token", res.data.token);
+                            history.push('/');
+                        }
+                    });
             } else {
                 alert('Invalid Email Address format.');
             }
